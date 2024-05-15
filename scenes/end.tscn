@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://4y0qx0b4n3eo"]
+
+[ext_resource type="Script" path="res://scripts/end.gd" id="1_0bns0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2mwv7"]
+font_size = 48
+font_color = Color(0, 1, 0, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="End" type="CanvasLayer"]
+script = ExtResource("1_0bns0")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.5
+offset_top = -166.0
+offset_right = 168.5
+offset_bottom = -99.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Вы выиграли!"
+label_settings = SubResource("LabelSettings_2mwv7")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -142.0
+offset_top = -336.0
+offset_right = 143.0
+offset_bottom = -246.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "Перезапустить"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

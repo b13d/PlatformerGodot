@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3 uid="uid://bj5ufqrdh8a7q"]
+
+[ext_resource type="Script" path="res://scripts/ui.gd" id="1_hfh85"]
+[ext_resource type="Texture2D" uid="uid://dgg8nco5g0xi" path="res://brackeys_platformer_assets/sprites/fruitChallenge.png" id="1_nimwq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ii54x"]
+font_size = 32
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5hw0"]
+atlas = ExtResource("1_nimwq")
+region = Rect2(3.175, 0.8, 10, 15)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hhx3b"]
+font_size = 40
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucq5u"]
+atlas = ExtResource("1_nimwq")
+region = Rect2(18.72, 0.8, 10, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8sac"]
+atlas = ExtResource("1_nimwq")
+region = Rect2(32.09, 0.8, 14.66, 15)
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_hfh85")
+
+[node name="Label (Challenge)" type="Label" parent="."]
+offset_left = 29.0
+offset_top = 30.0
+offset_right = 330.0
+offset_bottom = 77.0
+size_flags_horizontal = 4
+text = "Собрать фрукты:"
+label_settings = SubResource("LabelSettings_ii54x")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 36.0
+offset_top = 86.0
+offset_right = 99.0
+offset_bottom = 163.0
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+texture = SubResource("AtlasTexture_y5hw0")
+expand_mode = 3
+
+[node name="Label(Apple)" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "2"
+label_settings = SubResource("LabelSettings_hhx3b")
+
+[node name="TextureRect2" type="TextureRect" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+texture = SubResource("AtlasTexture_ucq5u")
+expand_mode = 3
+
+[node name="Label2(Pear)" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "2"
+label_settings = SubResource("LabelSettings_hhx3b")
+
+[node name="TextureRect3" type="TextureRect" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+texture = SubResource("AtlasTexture_l8sac")
+expand_mode = 3
+
+[node name="Label3(Grapes)" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "2"
+label_settings = SubResource("LabelSettings_hhx3b")
